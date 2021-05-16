@@ -1,23 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sportsImage"
+        android:adjustViewBounds="true"
+        android:transitionName="imageTransition">
+
+    </ImageView>
 
     <TextView
+        android:layout_alignBottom="@id/sportsImage"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/title"
         android:text="@string/title_placeholder"
         android:padding="8dp"
         style="@style/TextAppearance.AppCompat.Headline"/>
+
     <TextView
+        android:layout_below="@id/sportsImage"
+        android:textColor="?android:textColorSecondary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/newsTitle"
         android:text="@string/news_placeholder"
         android:padding="8dp"
         style="@style/TextAppearance.AppCompat.Subhead" />
+
     <TextView
+        android:layout_below="@id/newsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/subTitle"
@@ -25,4 +49,5 @@
         android:padding="8dp"
         style="@style/TextAppearance.AppCompat.Subhead" />
 
-</LinearLayout>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
